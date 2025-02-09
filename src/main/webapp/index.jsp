@@ -1,34 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Gestion de estudiantes</title>
+<title>Gestión de estudiantes</title>
 </head>
 <body>
 <h1>Gestión de estudiantes (Prac6b)</h1>
 
-<!-- Enlace para mostrar la información de la sesión -->
-<a href="Servlet?operacion=info">Información de sesión</a>
+<%
+    Boolean sesionNueva = session.isNew();
+    if (!sesionNueva) {
+%>
+    <!-- Enlace para mostrar la información de la sesión -->
+    <a href="Servlet?operacion=info">Información de sesión</a>
 
-<!-- Enlace para desconectar -->
-<a href="javascript:desconectar()">Desconectar</a>
+    <!-- Enlace para desconectar -->
+    <a href="javascript:desconectar()">Desconectar</a>
 
-<script type="text/javascript">
-function desconectar() {
-    var log_out = confirm("Con esta acción se finaliza la sesión actual. ¿Está seguro?");
-    if (log_out) {
-        window.location = "Servlet?operacion=desconectar";
+    <script type="text/javascript">
+    function desconectar() {
+        var log_out = confirm("Con esta acción se finaliza la sesión actual. ¿Está seguro?");
+        if (log_out) {
+            window.location = "Servlet?operacion=desconectar";
+        }
     }
-}
-</script>
+    </script>
+<%
+    }
+%>
 
 <h2>Consulta de estudiantes</h2>
-
-<p style="color: red">*En Informacion de sesion el campo "Número de usuarios conectados" suma pero no resta.</p>
 <!-- Formulario para la consulta de estudiantes -->
 <form action="Servlet" method="GET">
-	<input type="hidden" name="operacion" value="consulta">
-	
+    <input type="hidden" name="operacion" value="consulta">
+    
     <input type="text" id="sentencia" name="sentencia" placeholder="SELECT * FROM alumnos" required><br><br>
     <button type="submit">Consultar</button><br><br>
 
@@ -46,8 +52,8 @@ function desconectar() {
 <h2>Alta de Alumno</h2>
 <!-- Formulario para dar de alta a un alumno -->
 <form action="Servlet" method="POST">
-	<input type="hidden" name="operacion" value="alta">
-	
+    <input type="hidden" name="operacion" value="alta">
+    
     <label for="id">ID Alumno:</label><br>
     <input type="number" id="id" name="txtID" placeholder="1" min="1" required><br><br>
 

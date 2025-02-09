@@ -10,6 +10,6 @@
 <body>
     <h1>Sesión cerrada con éxito</h1>
     <p>Has cerrado la sesión correctamente. Si deseas volver al inicio, haz clic en el botón de abajo.</p>
-    <a href="index.html">Volver al Inicio</a>
+    <a href="index.jsp">Volver al Inicio</a>
 </body>
 </html>

@@ -8,6 +8,6 @@
 <body>
     <h1 class="error">Usa JPA para grabar un registro en una tabla</h1>
     <h3>Alumno añadido</h3>
-    <a href="index.html">Ir a la pantalla inicial</a>
+    <a href="index.jsp">Ir a la pantalla inicial</a>
 </body>
 </html>

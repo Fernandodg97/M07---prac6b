@@ -134,7 +134,7 @@ public class Servlet extends HttpServlet {
                     Alumno.saved(id, nombre, curso);
                     response.sendRedirect(PG_RESPUESTA_INICIO);
                 } catch (ClassNotFoundException e) {
-                    response.getWriter().println("<script>alert('No se puede registrar el alumno'); window.location.href='index.html';</script>");
+                    response.getWriter().println("<script>alert('No se puede registrar el alumno'); window.location.href='index.jsp';</script>");
                 }
             } else {
                 // Si el usuario aún no está validado, guardamos los datos en la sesión

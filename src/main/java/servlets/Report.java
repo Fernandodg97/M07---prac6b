@@ -34,7 +34,8 @@ public class Report extends HttpServlet {
 
 	@Override
 	public void init() throws ServletException {
-		Conexion.setURL("jdbc:mysql://10.162.201.153/dbalumnos?user=usuario&pass=usuario");
+		//Conexion.setURL("jdbc:mysql://10.162.201.153/dbalumnos?user=usuario&pass=usuario");
+		Conexion.getConexion();
 	}
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

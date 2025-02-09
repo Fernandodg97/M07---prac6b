@@ -8,6 +8,6 @@
 <body>
     <h1 class="error">Usuario o contraseña incorrecta</h1>
     <a href="acceso.jsp">Reintentar...</a>
-    <a href="index.html">Cancelar</a>
+    <a href="index.jsp">Cancelar</a>
 </body>
 </html>
