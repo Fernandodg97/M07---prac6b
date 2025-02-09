@@ -28,6 +28,11 @@
         <li>Configurar Tomcat 10.1.28 como servidor.</li>
         <li>Ejecutar la aplicación y acceder a través del navegador.</li>
     </ol>
+    <h2>Configuracion</h2>
+    <ul>
+        <li>Cambiar BBDD: En Conexion.java, se modifican las variables: dbURL, user y pass.</li>
+        <li>Cambiar o añadir usuarios: En Login.java, en la linea 63 dentro del validarUsuario. Se añade el usuario o se modifica el existente.</li>
+    </ul>
     <h2>Autor</h2>
     <p>Fernando DG</p>
     <h2>Licencia</h2>
